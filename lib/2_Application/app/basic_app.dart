@@ -9,7 +9,7 @@ class BasicApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp.router(
       title: 'To-Do-App',
-      localizationsDelegates:  [
+      localizationsDelegates:  const[
         ...GlobalMaterialLocalizations.delegates,
         GlobalWidgetsLocalizations.delegate,
       ],

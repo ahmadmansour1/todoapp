@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 
 import '../../core/appcongig.dart';
 
-class SettingsPage extends StatelessWidget {
-  const SettingsPage({super.key});
+class OverviewPage extends StatelessWidget {
+  const OverviewPage({super.key});
   static   const pageConfig = PageConfig(
-    icon: Icons.settings,
-    name: 'settings',
-    child: SettingsPage(),
+    icon: Icons.work_history_rounded,
+    name: 'overview',
+    child: OverviewPage(),
   );
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  Container(color: Colors.grey,);
   }
 }
