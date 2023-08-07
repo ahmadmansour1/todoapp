@@ -90,6 +90,15 @@ import 'package:todoapp/1_domain/entities/todo_entry.dart';
 
 
   }
+
+  @override
+  Future<Either<Failure, bool>> CreateTodoCollection(TodoCollection collection) {
+    toDoCollections.add(collection);
+    return Future.delayed(const Duration(milliseconds: 100), () => Right(true));
+
+  }
+
+
   }
 
 

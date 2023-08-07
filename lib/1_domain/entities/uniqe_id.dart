@@ -1,7 +1,9 @@
+import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:uuid/uuid.dart';
 
-class UniqueId{
+class UniqueId with EquatableMixin{
+
 final String value;
 const UniqueId._(this.value);
 
@@ -13,6 +15,10 @@ factory UniqueId.fromUinqueString (String uniqueStr){
 return UniqueId._(uniqueStr) ;
 
 }
+
+  @override
+
+  List<Object?> get props => [value];
 
 }
 class CollectionId extends UniqueId {

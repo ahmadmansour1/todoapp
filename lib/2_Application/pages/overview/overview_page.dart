@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todoapp/1_domain/usecasses/load-overview.dart';
 import 'package:todoapp/2_Application/bloc/todo_overview__cubit.dart';
-import 'package:todoapp/2_Application/view_states/error_overview.dart';
-import 'package:todoapp/2_Application/view_states/loaded_overview.dart';
+import 'package:todoapp/2_Application/pages/overview/view_states/error_overview.dart';
+import 'package:todoapp/2_Application/pages/overview/view_states/loaded_overview.dart';
+import 'package:todoapp/2_Application/pages/overview/view_states/loading_overiew.dart';
 
 import '../../core/appcongig.dart';
-import '../../view_states/loading_overiew.dart';
+
 
 
 class TodoOverviewProvider extends StatelessWidget {

@@ -11,7 +11,7 @@ import '../../../../1_domain/usecasses/load_todo_entry_item.dart';
 part 'todo_entry_item_state.dart';
 
 class TodoEntryItemCubit extends Cubit<TodoEntryItemState> {
-  TodoEntryItemCubit( {required this.loadTodoEntry ,required this.updateToDoEntryStatus , required this.collectionId , required this.entryId}) : super(TodoEntryItemInitial());
+  TodoEntryItemCubit( {required this.loadTodoEntry ,required this.updateToDoEntryStatus , required this.collectionId , required this.entryId}) : super(TodoEntryItemLoadingState());
   final EntryId entryId;
   final CollectionId collectionId ;
   final LoadTodoEntry loadTodoEntry ;

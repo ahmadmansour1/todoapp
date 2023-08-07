@@ -12,4 +12,7 @@ class TodoCollection{
    return TodoCollection(title: ' ' , id: CollectionId(), todoColor: TodoColor(currentIndex: 0));
 
  }
+ TodoCollection copyWith(String ? title  ,TodoColor? todoColor){
+   return TodoCollection(title: title ?? this.title, id: id, todoColor: todoColor ?? this.todoColor);
+ }
 }

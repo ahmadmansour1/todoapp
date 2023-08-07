@@ -55,8 +55,7 @@ class TodoEntryItem extends StatelessWidget {
       else {
         return const ErrorTodoEntryItem();
       }
-    });
-
-
+    }
+    );
   }
 }
