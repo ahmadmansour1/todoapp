@@ -1,10 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:todoapp/1_domain/entities/uniqe_id.dart';
 import 'package:todoapp/2_Application/core/appcongig.dart';
 import 'package:todoapp/2_Application/core/go_router_observer.dart';
 import 'package:todoapp/2_Application/pages/dashboard/dashboard_page.dart';
+import 'package:todoapp/2_Application/pages/detail/widget/detail_page.dart';
 import 'package:todoapp/2_Application/pages/home/home_page.dart';
+import 'package:todoapp/2_Application/pages/overview/overview_page.dart';
 import 'package:todoapp/2_Application/pages/settings/settings_page.dart';
 import 'package:todoapp/2_Application/pages/task/task_page.dart';
 
@@ -54,6 +57,26 @@ ShellRoute(navigatorKey: _shellNavigatorRoot,builder: (context , state , child) 
 
   ) )
 ]),
+      GoRoute(name: DetailsPage.pageConfig.name,
+        path:'$basePath/overview/:collectionId',
+      builder: (context , state){
+        return Scaffold(appBar: AppBar(title: const Text('details'), leading:
+          BackButton(onPressed: (){
+            if(context.canPop()){
+              context.pop();
+            }
+            else {
+              context.goNamed(HomePage.pageConfig.name, pathParameters: {
+                'tab': OverviewPage.pageConfig.name,
+              });
+            }
+          },),
+          ),
+        body: TodoDetailedProvider(collectionId: CollectionId.fromUinqueString(
+            state.pathParameters['collectionId']!),),
+        );
+      }
+      ),
       GoRoute(
           path: '/Home/start',
           builder: (context, state) {
