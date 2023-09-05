@@ -5,7 +5,7 @@ class PageConfig {
  final String name;
  final Widget child ;
 
-  PageConfig({ required this.icon,
+ const PageConfig({ required this.icon,
     required this.name,
     Widget ? child }) : child = child ?? const Placeholder();
 }
